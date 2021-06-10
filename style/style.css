@@ -1,0 +1,495 @@
+@font-face {
+  font-family: "RixLoveFool";
+  src: url("../fonts/RixLoveFool.ttf");
+}
+
+#preLoadImages {
+  width: 0px;
+  height: 0px;
+  background: url(../image/background.jpg);
+  background: url(../image/heart.png);
+  background: url(../image/img_heart-center.png);
+  background: url(../image/imgAnh.jpg);
+  background: url(../image/imgEm.jpg);
+  background: url(../image/white-heart.png);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "RixLoveFool";
+  font-size: 62.5%;
+}
+body {
+  font-family: "RixLoveFool";
+  height: 100vh;
+  background-image: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.curtain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.curtain__prev {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.curtain__heart {
+  width: 15rem;
+  height: 15rem;
+  z-index: 3;
+  animation: scaleHeart 0.6s infinite;
+}
+
+.curtain__text {
+  color: white;
+  text-align: center;
+  font-size: 6rem;
+  z-index: 3;
+}
+
+.curtain__wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.curtain__panel {
+  /* display: flex; */
+  background-color: #e74c3c;
+  color: #fff;
+  width: 50%;
+  height: 100vh;
+  /* float: left; */
+  position: relative;
+  z-index: 2;
+}
+.curtain__wrapper-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container__love {
+  width: 80rem;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.container_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.countdown__love--far {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.5rem;
+  display: none;
+}
+
+.container--child {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.countdown__love--child {
+  width: 5rem;
+  height: auto;
+}
+
+.countdown_img {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.love--far_countdown {
+  color: #fff;
+  width: inherit;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  top: 4rem;
+}
+
+.love--far__number {
+  font-size: 2rem;
+}
+
+.love--far__text {
+  font-size: 2rem;
+  margin-top: 0.8rem;
+}
+
+.container__img--day {
+  width: 100%;
+  height: auto;
+}
+
+.title__days--start {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+.image--heart__days {
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.img_top {
+  width: 100%;
+  height: 100%;
+}
+
+.days_top {
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.text-heart__top {
+  font-size: 1.4rem;
+  color: white;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.text-heart__bottom {
+  font-size: 1.4rem;
+  color: white;
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.image-left {
+  width: 15rem;
+  height: 21rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+.image-left__item {
+  width: 13rem;
+  height: 13rem;
+  background-color: red;
+  border: 0.5rem solid white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.image-heart__center {
+  width: 5rem;
+  height: 5rem;
+  animation: scaleHeart 0.6s infinite;
+}
+
+.image-right {
+  width: 15rem;
+  height: 21rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+}
+
+.image-right__item {
+  width: 13rem;
+  height: 13rem;
+  background-color: yellow;
+  border: 0.5rem solid white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  bottom: -4rem;
+  width: 100%;
+}
+
+.years-old {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.old {
+  width: auto;
+  height: auto;
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: aliceblue;
+  padding: 0.5rem;
+}
+
+.cung {
+  width: 10rem;
+  height: auto;
+  background-color: #ff007f;
+  border: 1px solid #ff007f;
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  text-align: center;
+  color: aliceblue;
+  padding: 0.5rem;
+}
+
+.date {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  height: 8rem;
+}
+.date_img {
+  width: 100%;
+  height: 100%;
+}
+
+.date_child {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+}
+
+.date_number {
+  color: white;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.date_text {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: -3rem;
+  width: 100%;
+}
+/*----------heart fly--------------*/
+.bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.heart {
+  position: absolute;
+  top: -50%;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -m-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.heart:before {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+.heart:after {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: 100%;
+}
+
+@keyframes scaleHeart {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes curtainLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes curtainRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/*heart fly*/
+@-webkit-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-moz-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@-ms-keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+@keyframes love {
+  0% {
+    top: 110%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container__love {
+    width: 100%;
+  }
+  .image {
+    position: relative;
+    top: -3rem;
+  }
+  .date {
+    margin-top: 0;
+    position: relative;
+    top: -2rem;
+  }
+  .old {
+    font-size: 1.1rem;
+  }
+  .image-heart__center{
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .curtain__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container__love {
+    width: 100%;
+  }
+  .curtain__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .container__love {
+    width: 54rem;
+  }
+  .curtain__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container__love {
+    width: 72rem;
+  }
+  .curtain__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container__love {
+    width: 96rem;
+  }
+  .curtain__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container__love {
+    width: 114rem;
+  }
+  .curtain__text {
+    width: 100%;
+  }
+}
